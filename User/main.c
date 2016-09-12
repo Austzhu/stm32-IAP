@@ -14,7 +14,7 @@ int main(void)
 	Haedware_Init();
 	
 #if 0
-	Init_Info.Addr = 0x99;
+	Init_Info.Addr = 0x70;
 	Init_Info.Bound[0]=Init_Info.Bound[1]=9600;
 	Init_Info.Bound[2]=57600;
 	Init_Info.Is_Coordi = 1;
