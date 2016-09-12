@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\Output\Boot.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\Output\Boot.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Wed Aug 10 11:37:25 2016
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Mon Sep 12 09:58:15 2016
 <BR><P>
 <H3>Maximum Stack Usage =        200 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1292,10 +1292,11 @@ Global Symbols
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Single_Ctrl
 </UL>
 
-<P><STRONG><a name="[a3]"></a>Single_Ctrl</STRONG> (Thumb, 202 bytes, Stack size 40 bytes, format_data.o(.text))
+<P><STRONG><a name="[a3]"></a>Single_Ctrl</STRONG> (Thumb, 210 bytes, Stack size 40 bytes, format_data.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = Single_Ctrl &rArr; Download_Application &rArr; Recv_pkg &rArr; FlashProgrm &rArr; FLASH_ProgramHalfWord &rArr; FLASH_WaitForLastOperation
 </UL>
 <BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Enable_485
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Download_Application
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Crc16
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DisplayPackage
@@ -1447,6 +1448,7 @@ Global Symbols
 
 <P><STRONG><a name="[a0]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Haedware_Init
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Single_Ctrl
 </UL>
 
 <P><STRONG><a name="[172]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)

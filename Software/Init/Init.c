@@ -14,15 +14,15 @@ void SoftReset(void)
 
 static void K_Init(void)
 {
+#ifdef Single_App
 	GPIO_InitTypeDef GPIO_InitStructure;
  	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB | RCC_APB2Periph_GPIOA | RCC_APB2Periph_AFIO, ENABLE);  
-	
-#ifdef Single_App
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;//K1
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; 
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-  GPIO_Init(GPIOA,&GPIO_InitStructure);
-  //GPIO_SetBits(GPIOA,GPIO_Pin_3); 
+
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;//K1
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; 
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOA,&GPIO_InitStructure);
+	//GPIO_SetBits(GPIOA,GPIO_Pin_3); 
 #endif
 }
 void Haedware_Init(void)
